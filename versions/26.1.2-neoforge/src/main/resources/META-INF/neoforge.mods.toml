@@ -6,6 +6,7 @@ license = "MIT"
 modId = "netmusicplus"
 version = "${version}"
 displayName = "NetMusic Plus"
+logoFile = "icon.png"
 authors = "wuliaoppx"
 description = '''Amplifier enchantment for NetMusic music players plus a portable MP3 player.'''
 

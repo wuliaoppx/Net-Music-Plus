@@ -8,6 +8,7 @@
     "wuliaoppx"
   ],
   "license": "MIT",
+    "icon": "assets/netmusicplus/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [

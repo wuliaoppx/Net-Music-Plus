@@ -30,12 +30,12 @@
 
 | 目录 | Minecraft | 加载器 | mod 版本 | 构建 JDK |
 |---|---|---|---|---|
-| `versions/1.20.1-forge` | 1.20.1 | Forge 47.4.28 | 1.0.1 | Gradle 需 JDK 21，ForgeGradle 另需 JDK 17 |
-| `versions/1.20.1-fabric` | 1.20.1 | Fabric Loader 0.16.14 / API 0.92.12 | 1.0.1 | 17 |
-| `versions/1.21.1-neoforge` | 1.21.1 | NeoForge 21.1.259 | 1.2.8 | 21 |
-| `versions/1.21.1-fabric` | 1.21.1 | Fabric Loader 0.20.1 / API 0.116.17 | 1.3.1 | 21 |
-| `versions/26.1.2-neoforge` | 26.1.2 | NeoForge 26.1.2.122 | 1.0.2 | 25 |
-| `versions/26.1.2-fabric` | 26.1.2 | Fabric Loader 0.20.1 / API 0.155.3 | 1.0.2 | 25 |
+| `versions/1.20.1-forge` | 1.20.1 | Forge 47.4.28 | 1.0.2 | Gradle 需 JDK 21，ForgeGradle 另需 JDK 17 |
+| `versions/1.20.1-fabric` | 1.20.1 | Fabric Loader 0.16.14 / API 0.92.12 | 1.0.2 | 17 |
+| `versions/1.21.1-neoforge` | 1.21.1 | NeoForge 21.1.259 | 1.2.9 | 21 |
+| `versions/1.21.1-fabric` | 1.21.1 | Fabric Loader 0.20.1 / API 0.116.17 | 1.3.2 | 21 |
+| `versions/26.1.2-neoforge` | 26.1.2 | NeoForge 26.1.2.122 | 1.0.3 | 25 |
+| `versions/26.1.2-fabric` | 26.1.2 | Fabric Loader 0.20.1 / API 0.155.3 | 1.0.3 | 25 |
 
 ## 构建
 
