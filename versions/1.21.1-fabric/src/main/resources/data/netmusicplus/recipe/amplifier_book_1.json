@@ -1,0 +1,22 @@
+{
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:note_block"
+                        },
+                        {
+                            "item":  "minecraft:copper_ingot"
+                        }
+                    ],
+    "category":  "misc",
+    "result":  {
+                   "id":  "minecraft:enchanted_book",
+                   "components":  {
+                                      "minecraft:stored_enchantments":  {
+                                                                            "levels":  {
+                                                                                           "netmusicplus:amplifier":  1
+                                                                                       }
+                                                                        }
+                                  }
+               },
+    "type":  "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven { url = 'https://maven.minecraftforge.net/' }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        mavenCentral()
+    }
+}
+
+// ForgeGradle 6 runs its MCP steps (decompile / recompile) on a Java 17 toolchain. Only Zulu 21 and 25 are installed
+// on this machine, so let Gradle fetch a JDK 17 on demand instead of failing the build.
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+rootProject.name = 'netmusicplus-forge-1.20.1'

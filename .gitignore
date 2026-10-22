@@ -1,0 +1,25 @@
+# ---- Gradle ----
+.gradle/
+build/
+out/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ---- 本地编译依赖（第三方 jar，不随仓库分发）----
+libs/
+
+# ---- 运行 / 测试目录 ----
+run/
+.fabric/
+
+# ---- IDE / 系统 ----
+.idea/
+*.iml
+.vscode/
+Thumbs.db
+desktop.ini
+
+# ---- 本机研究资料与临时产物（不入库）----
+_ref/
+_scratch*/
+_buildlogs/
+*.log

@@ -1,0 +1,23 @@
+{
+    "type":  "netmusicplus:amplifier_book",
+    "category":  "misc",
+    "amplifier_level":  3,
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:note_block"
+                        },
+                        {
+                            "item":  "minecraft:copper_ingot"
+                        },
+                        {
+                            "item":  "minecraft:amethyst_shard"
+                        },
+                        {
+                            "item":  "minecraft:echo_shard"
+                        }
+                    ],
+    "result":  {
+                   "item":  "minecraft:enchanted_book",
+                   "count":  1
+               }
+}

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.wuliaoppx.netmusicplus.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "netmusicplus.refmap.json",
+  "mixins": [
+    "BlockMixin",
+    "MusicPlayerDropsMixin",
+    "NetworkHandlerMixin",
+    "TileEntityMusicPlayerMixin"
+  ],
+  "client": [
+    "SoundEngineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

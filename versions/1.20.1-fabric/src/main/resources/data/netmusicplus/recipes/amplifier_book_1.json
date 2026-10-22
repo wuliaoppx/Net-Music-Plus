@@ -1,0 +1,17 @@
+{
+    "type":  "netmusicplus:amplifier_book",
+    "category":  "misc",
+    "amplifier_level":  1,
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:note_block"
+                        },
+                        {
+                            "item":  "minecraft:copper_ingot"
+                        }
+                    ],
+    "result":  {
+                   "item":  "minecraft:enchanted_book",
+                   "count":  1
+               }
+}

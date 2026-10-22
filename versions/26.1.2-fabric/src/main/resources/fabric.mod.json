@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "netmusicplus",
+  "version": "${version}",
+  "name": "Net Music Plus",
+  "description": "Amplifier enchantment for NetMusic music players, plus a portable MP3 player with discs, play modes and a now-playing overlay.",
+  "authors": [
+    "wuliaoppx"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.wuliaoppx.netmusicplus.NetMusicPlusFabric"
+    ],
+    "client": [
+      "com.wuliaoppx.netmusicplus.client.NetMusicPlusFabricClient"
+    ]
+  },
+  "mixins": [
+    "netmusicplus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.0",
+    "fabric-api": "*",
+    "minecraft": "~26.1.2",
+    "java": ">=25",
+    "netmusic": ">=1.5.0"
+  },
+  "suggests": {
+    "trinkets": ">=4.0.1"
+  }
+}

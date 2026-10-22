@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "Net Music Plus resources",
+    "min_format": 84,
+    "max_format": [101, 1]
+  }
+}

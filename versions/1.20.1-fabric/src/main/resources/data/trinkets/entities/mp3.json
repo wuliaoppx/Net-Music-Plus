@@ -1,0 +1,8 @@
+{
+  "entities": [
+    "player"
+  ],
+  "slots": [
+    "mp3/mp3"
+  ]
+}

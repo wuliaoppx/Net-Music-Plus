@@ -1,0 +1,28 @@
+{
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:note_block"
+                        },
+                        {
+                            "item":  "minecraft:copper_ingot"
+                        },
+                        {
+                            "item":  "minecraft:amethyst_shard"
+                        },
+                        {
+                            "item":  "minecraft:echo_shard"
+                        }
+                    ],
+    "category":  "misc",
+    "result":  {
+                   "id":  "minecraft:enchanted_book",
+                   "components":  {
+                                      "minecraft:stored_enchantments":  {
+                                                                            "levels":  {
+                                                                                           "netmusicplus:amplifier":  3
+                                                                                       }
+                                                                        }
+                                  }
+               },
+    "type":  "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,6 @@
+{
+  "icon": "netmusicplus:slot/empty_mp3_slot",
+  "validator_predicates": [
+    "trinkets:tag"
+  ]
+}

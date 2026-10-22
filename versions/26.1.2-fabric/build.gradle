@@ -1,0 +1,42 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+version = project.mod_version
+group = 'com.wuliaoppx'
+
+base {
+    archivesName = "netmusicplus-fabric-${project.minecraft_version}"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+dependencies {
+    // Minecraft 26.1.x ships unobfuscated: no mappings, no remapping of mod deps.
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    compileOnly files('libs/netmusic-1.5.2-fabric+mc26.1.jar')
+    compileOnly files('libs/trinkets-4.0.1+26.1.jar')
+    compileOnly files('libs/yumi-mc-foundation-1.0.1+26.1.jar')
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+    options.compilerArgs += ['-Xmaxerrs', '2000']
+}

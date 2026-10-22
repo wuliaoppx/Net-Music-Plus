@@ -1,0 +1,51 @@
+plugins {
+    id 'fabric-loom' version "${loom_version}"
+}
+
+version = project.mod_version
+group = 'com.wuliaoppx'
+
+base {
+    archivesName = "netmusicplus-fabric-${project.minecraft_version}"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Soft dependencies: compiled against only, never bundled. Loom remaps them to named mappings.
+    modCompileOnly files('libs/trinkets-3.10.0.jar')
+    // Trinkets ships Cardinal Components as nested jars; its API types appear in the method signatures we call.
+    modCompileOnly files('libs/cardinal-components-base-6.1.0.jar')
+    modCompileOnly files('libs/cardinal-components-entity-6.1.0.jar')
+    modCompileOnly files('libs/netmusic-1.5.2-fabric+mc1.21.1.jar')
+    modCompileOnly files('libs/Jade-1.21.1-Fabric-15.10.6.jar')
+}
+
+loom {
+    mixin {
+        defaultRefmapName = 'netmusicplus.refmap.json'
+    }
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}

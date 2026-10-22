@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version "${moddev_version}"
+}
+
+version = mod_version
+group = 'com.wuliaoppx.netmusicplus'
+base { archivesName = 'netmusicplus-neoforge-26.1.2' }
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(25) }
+}
+
+repositories {
+    maven { name = 'Curios'; url = 'https://maven.theillusivec4.top/' }
+    mavenCentral()
+}
+
+neoForge {
+    version = project.neoforge_version
+
+    runs {
+        client {
+            client()
+            gameDirectory = file('run')
+        }
+        server {
+            server()
+            gameDirectory = file('run-server')
+        }
+    }
+
+    mods {
+        netmusicplus {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+    // Curios is optional at runtime; the API is only reached through reflection-free compile-time types here.
+    compileOnly files('libs/netmusic-1.5.2-neoforge+mc26.1.jar')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand 'version': project.version, 'minecraft_version': project.minecraft_version, 'neoforge_version': project.neoforge_version
+    }
+}

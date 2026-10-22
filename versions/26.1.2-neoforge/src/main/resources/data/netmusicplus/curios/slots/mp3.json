@@ -1,0 +1,8 @@
+{
+  "order": 100,
+  "size": 1,
+  "icon": "netmusicplus:slot/empty_mp3_slot",
+  "validators": [
+    "curios:tag"
+  ]
+}

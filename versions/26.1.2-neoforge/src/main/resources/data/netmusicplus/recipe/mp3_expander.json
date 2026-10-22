@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:chest",
+    "minecraft:iron_ingot"
+  ],
+  "result": {
+    "id": "netmusicplus:mp3_expander",
+    "count": 1
+  }
+}

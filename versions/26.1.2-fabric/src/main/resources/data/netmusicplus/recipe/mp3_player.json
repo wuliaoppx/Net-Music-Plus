@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "netmusic:music_player",
+    "minecraft:iron_chain"
+  ],
+  "result": {
+    "id": "netmusicplus:mp3_player",
+    "count": 1
+  }
+}
