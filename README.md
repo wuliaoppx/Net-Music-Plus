@@ -1,5 +1,7 @@
 # Net Music Plus · 网络音乐机扩展
 
+该MOD完全由Ai生成！！！！！
+
 **给 [NetMusic](https://github.com/TartaricAcid/NetMusic) 加一副“更大的嗓门”，再加一台能装进口袋的唱片机。**
 
 [中文](#中文) · [English](#english)
