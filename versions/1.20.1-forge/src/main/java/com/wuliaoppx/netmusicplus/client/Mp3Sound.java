@@ -49,14 +49,21 @@ public class Mp3Sound extends AbstractTickableSoundInstance {
         this.y = y;
         this.z = z;
         this.pitch = 1.0F;
+        boolean centred = personal || isLocalPlayer(owner);
+        this.relative = centred;
         this.volume = personal ? 1.0F : volume;
-        this.attenuation = personal ? SoundInstance.Attenuation.NONE : SoundInstance.Attenuation.LINEAR;
+        this.attenuation = centred ? SoundInstance.Attenuation.NONE : SoundInstance.Attenuation.LINEAR;
+    }
+
+    private static boolean isLocalPlayer(java.util.UUID uuid) {
+        net.minecraft.world.entity.player.Player self = net.minecraft.client.Minecraft.getInstance().player;
+        return self != null && self.getUUID().equals(uuid);
     }
 
     @Override
     public void tick() {
         this.ticks++;
-        if (!this.personal) {
+        if (!this.relative) {
             // Follow the owner so the music does not stay behind when they walk away.
             if (Minecraft.getInstance().level != null) {
                 Player player = Minecraft.getInstance().level.getPlayerByUUID(this.owner);

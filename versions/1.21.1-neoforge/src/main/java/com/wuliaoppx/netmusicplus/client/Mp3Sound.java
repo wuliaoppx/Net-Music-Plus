@@ -25,7 +25,10 @@ import java.util.concurrent.CompletionException;
  * <p>
  * The audible range comes from the sound engine: {@code max(volume, 1) * attenuationDistance}, with the vanilla
  * attenuation distance of 16 for NetMusic's sound event. So a volume of {@code 4.0} is the familiar 64 block range.
- * Personal playback is marked relative, which makes the sound non-positional and equally loud everywhere.
+ * The holder always hears their own player as a <em>relative</em> sound. Relative sounds are not positioned by OpenAL,
+ * so the stereo image stays centred; a positional source sitting on top of the listener makes the channels flip wildly
+ * as the camera turns. Everyone else hears the same sound positioned at the holder, which is what out-loud mode needs.
+ * Personal playback is relative too, so it is equally loud everywhere and never pans.
  */
 public class Mp3Sound extends AbstractTickableSoundInstance {
     private final URL url;
@@ -44,15 +47,23 @@ public class Mp3Sound extends AbstractTickableSoundInstance {
         this.y = y;
         this.z = z;
         this.pitch = 1.0F;
+        boolean centred = personal || isLocalPlayer(owner);
+        this.relative = centred;
         this.volume = personal ? 1.0F : volume;
-        this.attenuation = personal ? SoundInstance.Attenuation.NONE : SoundInstance.Attenuation.LINEAR;
+        this.attenuation = centred ? SoundInstance.Attenuation.NONE : SoundInstance.Attenuation.LINEAR;
+    }
+
+    private static boolean isLocalPlayer(UUID uuid) {
+        Player self = Minecraft.getInstance().player;
+        return self != null && self.getUUID().equals(uuid);
     }
 
     @Override
     public void tick() {
         this.ticks++;
-        if (!this.personal) {
+        if (!this.relative) {
             // Follow the owner so the music does not stay behind when they walk away.
+            // Relative sounds ignore their position, so this is only for other listeners.
             if (Minecraft.getInstance().level != null) {
                 Player player = Minecraft.getInstance().level.getPlayerByUUID(this.owner);
                 if (player != null) {

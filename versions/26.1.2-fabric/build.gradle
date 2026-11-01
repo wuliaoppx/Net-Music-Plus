@@ -6,7 +6,7 @@ version = project.mod_version
 group = 'com.wuliaoppx'
 
 base {
-    archivesName = "netmusicplus-fabric-${project.minecraft_version}"
+    archivesName = "NetMusicPlus-Fabric-26.1.2"
 }
 
 repositories {

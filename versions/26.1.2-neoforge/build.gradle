@@ -5,7 +5,7 @@ plugins {
 
 version = mod_version
 group = 'com.wuliaoppx.netmusicplus'
-base { archivesName = 'netmusicplus-neoforge-26.1.2' }
+base { archivesName = 'NetMusicPlus-NeoForge-26.1.2' }
 
 java {
     toolchain { languageVersion = JavaLanguageVersion.of(25) }

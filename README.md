@@ -58,12 +58,12 @@ NetMusic 的网络音乐机把唱片里的在线音乐播放给附近玩家，�
 
 | 目录 | Minecraft | 加载器 | mod 版本 | 构建 JDK |
 |---|---|---|---|---|
-| `versions/1.20.1-forge` | 1.20.1 | Forge 47.4.28 | 1.0.2 | Gradle 需 JDK 21，ForgeGradle 另需 JDK 17 |
-| `versions/1.20.1-fabric` | 1.20.1 | Fabric Loader 0.16.14 / API 0.92.12 | 1.0.2 | 17 |
-| `versions/1.21.1-neoforge` | 1.21.1 | NeoForge 21.1.259 | 1.2.9 | 21 |
-| `versions/1.21.1-fabric` | 1.21.1 | Fabric Loader 0.20.1 / API 0.116.17 | 1.3.2 | 21 |
-| `versions/26.1.2-neoforge` | 26.1.2 | NeoForge 26.1.2.122 | 1.0.3 | 25 |
-| `versions/26.1.2-fabric` | 26.1.2 | Fabric Loader 0.20.1 / API 0.155.3 | 1.0.3 | 25 |
+| `versions/1.20.1-forge` | 1.20.1 | Forge 47.4.28 | 1.0.3 | Gradle 需 JDK 21，ForgeGradle 另需 JDK 17 |
+| `versions/1.20.1-fabric` | 1.20.1 | Fabric Loader 0.16.14 / API 0.92.12 | 1.0.3 | 17 |
+| `versions/1.21.1-neoforge` | 1.21.1 | NeoForge 21.1.259 | 1.2.10 | 21 |
+| `versions/1.21.1-fabric` | 1.21.1 | Fabric Loader 0.20.1 / API 0.116.17 | 1.3.3 | 21 |
+| `versions/26.1.2-neoforge` | 26.1.2 | NeoForge 26.1.2.122 | 1.0.4 | 25 |
+| `versions/26.1.2-fabric` | 26.1.2 | Fabric Loader 0.20.1 / API 0.155.3 | 1.0.4 | 25 |
 
 ### 依赖
 
@@ -108,7 +108,7 @@ cd versions/1.21.1-fabric
 JAVA_HOME=/path/to/jdk-21 ./gradlew build      # Windows: set JAVA_HOME=... 后 gradlew.bat build
 ```
 
-产物在 `build/libs/` 下。
+产物在 `build/libs/` 下，文件名形如 `NetMusicPlus-<加载器>-<游戏版本>-<模组版本>.jar`。
 
 #### 需要自备的编译依赖（`libs/` 不随仓库分发）
 
@@ -185,12 +185,12 @@ NetMusic's music player plays online music to nearby players within a fixed 64-b
 
 | Directory | Minecraft | Loader | Mod version | Build JDK |
 |---|---|---|---|---|
-| `versions/1.20.1-forge` | 1.20.1 | Forge 47.4.28 | 1.0.2 | Gradle on JDK 21, ForgeGradle needs JDK 17 |
-| `versions/1.20.1-fabric` | 1.20.1 | Fabric Loader 0.16.14 / API 0.92.12 | 1.0.2 | 17 |
-| `versions/1.21.1-neoforge` | 1.21.1 | NeoForge 21.1.259 | 1.2.9 | 21 |
-| `versions/1.21.1-fabric` | 1.21.1 | Fabric Loader 0.20.1 / API 0.116.17 | 1.3.2 | 21 |
-| `versions/26.1.2-neoforge` | 26.1.2 | NeoForge 26.1.2.122 | 1.0.3 | 25 |
-| `versions/26.1.2-fabric` | 26.1.2 | Fabric Loader 0.20.1 / API 0.155.3 | 1.0.3 | 25 |
+| `versions/1.20.1-forge` | 1.20.1 | Forge 47.4.28 | 1.0.3 | Gradle on JDK 21, ForgeGradle needs JDK 17 |
+| `versions/1.20.1-fabric` | 1.20.1 | Fabric Loader 0.16.14 / API 0.92.12 | 1.0.3 | 17 |
+| `versions/1.21.1-neoforge` | 1.21.1 | NeoForge 21.1.259 | 1.2.10 | 21 |
+| `versions/1.21.1-fabric` | 1.21.1 | Fabric Loader 0.20.1 / API 0.116.17 | 1.3.3 | 21 |
+| `versions/26.1.2-neoforge` | 26.1.2 | NeoForge 26.1.2.122 | 1.0.4 | 25 |
+| `versions/26.1.2-fabric` | 26.1.2 | Fabric Loader 0.20.1 / API 0.155.3 | 1.0.4 | 25 |
 
 ### Dependencies
 
